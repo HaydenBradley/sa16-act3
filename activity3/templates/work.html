@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+</head>
+<body>
+    <h1>My Work</h1>
+    {% for project in projects %}
+        <div>
+           
+            <p>{{ project.description }}</p>
+            <img src="{% static 'sa-16.png' %}" alt="My Image" style="width: 200px; height: auto;">
+
+            <h3>Key Accomplishments</h3>
+            <p>{{ project.accomplishments }}</p>
+            <h3>Technologies Used</h3>
+            <ul>
+                {% for technology in project.technologies %}
+                    <li>{{ technology }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</body>
+</html>

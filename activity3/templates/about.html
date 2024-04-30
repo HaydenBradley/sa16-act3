@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
+    <h1>About Me</h1>
+    <h2>Biography</h2>
+    <p>{{ biography }}</p>
+
+    <h2>Education Background</h2>
+    <p>{{ education_background }}</p>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Achievements</h2>
+    <p>{{ achievements }}</p>
+</body>
+</html>
